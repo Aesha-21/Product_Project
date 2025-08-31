@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "SalesApp.Controllers.SalesController",
+    "Method": "CreateSale",
+    "RelativePath": "api/Sales",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sale",
+        "Type": "SalesApp.Models.Sale",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SalesApp.Controllers.SalesController",
+    "Method": "GetAllSales",
+    "RelativePath": "api/Sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
