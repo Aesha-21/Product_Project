@@ -5,7 +5,7 @@ import { SalesService, Sale } from '../../services/sales.service';
 @Component({
   selector: 'app-sales',
   standalone: false,
- templateUrl: 'sales.component.html',
+  templateUrl: 'sale.component.html',
   // styleUrls: ['./sales.component.css']
 })
 export class SalesComponent implements OnInit{
