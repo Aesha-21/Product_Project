@@ -1,44 +1,64 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SalesService, Sale } from '../../services/sales.service';
 
 @Component({
   selector: 'app-sales',
   standalone: false,
-  templateUrl: 'sale.component.html',
-  // styleUrls: ['./sales.component.css']
+  templateUrl: 'sale.component.html'
 })
-export class SalesComponent implements OnInit{
-saleForm!: FormGroup;
-  sales: Sale[] = [];
+export class SalesComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private salesService: SalesService) {}
+  sale: Sale = {
+    party: '',
+    date: '',
+    nos: 0,
+    purchasePrice: 0,
+    purchaseTotal: 0,
+    sellingPrice: 0,
+    sellingTotal: 0,
+    difference: 0,
+    deliveryDate: ''
+  };
+
+  salesList: Sale[] = [];
+
+  constructor(private salesService: SalesService) {}
 
   ngOnInit(): void {
-    this.saleForm = this.fb.group({
-      party: ['', Validators.required],
-      date: ['', Validators.required],
-      nos: [0, Validators.required],
-      purchasePrice: [0, Validators.required],
-      sellingPrice: [0, Validators.required],
-      deliveryDate: ['', Validators.required]
-    });
-
     this.loadSales();
   }
 
-  onSubmit(): void {
-    if (this.saleForm.valid) {
-      this.salesService.createSale(this.saleForm.value).subscribe(() => {
-        this.loadSales();
-        this.saleForm.reset();
-      });
-    }
+  submitSale() {
+    this.salesService.addSale(this.sale).subscribe({
+      next: (data) => {
+        alert('Sale added successfully!');
+        this.salesList.push(data);
+        this.resetForm();
+      },
+      error: (err) => {
+        console.error(err);
+        alert('Error adding sale');
+      }
+    });
   }
 
-  loadSales(): void {
+  loadSales() {
     this.salesService.getSales().subscribe(data => {
-      this.sales = data;
+      this.salesList = data;
     });
+  }
+
+  resetForm() {
+    this.sale = {
+      party: '',
+      date: '',
+      nos: 0,
+      purchasePrice: 0,
+      purchaseTotal: 0,
+      sellingPrice: 0,
+      sellingTotal: 0,
+      difference: 0,
+      deliveryDate: ''
+    };
   }
 }

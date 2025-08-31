@@ -3,15 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Sale {
-  id?: number;
   party: string;
   date: string;
   nos: number;
   purchasePrice: number;
-  purchaseTotal?: number;
+  purchaseTotal: number;
   sellingPrice: number;
-  sellingTotal?: number;
-  difference?: number;
+  sellingTotal: number;
+  difference: number;
   deliveryDate: string;
 }
 
@@ -20,14 +19,16 @@ export interface Sale {
 })
 export class SalesService {
 
- private apiUrl = 'https://localhost:5001/api/sales'; // your .NET API
+  private apiUrl = 'https://localhost:7165/api/sales'; // Your .NET API URL
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  createSale(sale: Sale): Observable<any> {
-    return this.http.post(this.apiUrl, sale);
+  // POST (create new sale)
+  addSale(sale: Sale): Observable<Sale> {
+    return this.http.post<Sale>(this.apiUrl, sale);
   }
 
+  // GET (fetch all sales)
   getSales(): Observable<Sale[]> {
     return this.http.get<Sale[]>(this.apiUrl);
   }

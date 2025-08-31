@@ -1,40 +1,23 @@
-<h2>Sales Entry</h2>
-<form [formGroup]="saleForm" (ngSubmit)="onSubmit()">
-  <input formControlName="party" placeholder="Party" required />
-  <input formControlName="date" type="date" required />
-  <input formControlName="nos" type="number" placeholder="Nos" required />
-  <input formControlName="purchasePrice" type="number" placeholder="Purchase Price" required />
-  <input formControlName="sellingPrice" type="number" placeholder="Selling Price" required />
-  <input formControlName="deliveryDate" type="date" required />
-  <button type="submit">Add Sale</button>
+<h2>Add Sale</h2>
+<form (ngSubmit)="submitSale()">
+  <label>Party: <input [(ngModel)]="sale.party" name="party"></label><br>
+  <label>Date: <input [(ngModel)]="sale.date" type="date" name="date"></label><br>
+  <label>Nos: <input [(ngModel)]="sale.nos" type="number" name="nos"></label><br>
+  <label>Purchase Price: <input [(ngModel)]="sale.purchasePrice" type="number" name="purchasePrice"></label><br>
+  <label>Purchase Total: <input [(ngModel)]="sale.purchaseTotal" type="number" name="purchaseTotal"></label><br>
+  <label>Selling Price: <input [(ngModel)]="sale.sellingPrice" type="number" name="sellingPrice"></label><br>
+  <label>Selling Total: <input [(ngModel)]="sale.sellingTotal" type="number" name="sellingTotal"></label><br>
+  <label>Difference: <input [(ngModel)]="sale.difference" type="number" name="difference"></label><br>
+  <label>Delivery Date: <input [(ngModel)]="sale.deliveryDate" type="date" name="deliveryDate"></label><br>
+
+  <button type="submit">Save</button>
 </form>
 
-<h3>Sales List</h3>
-<table border="1">
-  <thead>
-    <tr>
-      <th>Party</th>
-      <th>Date</th>
-      <th>Nos</th>
-      <th>Purchase Price</th>
-      <th>Purchase Total</th>
-      <th>Selling Price</th>
-      <th>Selling Total</th>
-      <th>Difference</th>
-      <th>Delivery Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let s of sales">
-      <td>{{ s.party }}</td>
-      <td>{{ s.date | date }}</td>
-      <td>{{ s.nos }}</td>
-      <td>{{ s.purchasePrice }}</td>
-      <td>{{ s.purchaseTotal }}</td>
-      <td>{{ s.sellingPrice }}</td>
-      <td>{{ s.sellingTotal }}</td>
-      <td>{{ s.difference }}</td>
-      <td>{{ s.deliveryDate | date }}</td>
-    </tr>
-  </tbody>
-</table>
+<hr>
+
+<h2>Sales List</h2>
+<ul>
+  <li *ngFor="let s of salesList">
+    {{ s.party }} - {{ s.sellingTotal }} - Diff: {{ s.difference }}
+  </li>
+</ul>
