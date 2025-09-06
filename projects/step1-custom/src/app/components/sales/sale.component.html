@@ -1,23 +1,32 @@
-<h2>Add Sale</h2>
-<form (ngSubmit)="submitSale()">
-  <label>Party: <input [(ngModel)]="sale.party" name="party"></label><br>
-  <label>Date: <input [(ngModel)]="sale.date" type="date" name="date"></label><br>
-  <label>Nos: <input [(ngModel)]="sale.nos" type="number" name="nos"></label><br>
-  <label>Purchase Price: <input [(ngModel)]="sale.purchasePrice" type="number" name="purchasePrice"></label><br>
-  <label>Purchase Total: <input [(ngModel)]="sale.purchaseTotal" type="number" name="purchaseTotal"></label><br>
-  <label>Selling Price: <input [(ngModel)]="sale.sellingPrice" type="number" name="sellingPrice"></label><br>
-  <label>Selling Total: <input [(ngModel)]="sale.sellingTotal" type="number" name="sellingTotal"></label><br>
-  <label>Difference: <input [(ngModel)]="sale.difference" type="number" name="difference"></label><br>
-  <label>Delivery Date: <input [(ngModel)]="sale.deliveryDate" type="date" name="deliveryDate"></label><br>
+<h2>Sales Entry</h2>
 
-  <button type="submit">Save</button>
+<form (ngSubmit)="onSubmit()" #salesForm="ngForm">
+  <label>Party:</label>
+  <input [(ngModel)]="sale.party" name="party" required />
+
+  <label>Date:</label>
+  <input [(ngModel)]="sale.date" type="date" name="date" required />
+
+  <label>Nos:</label>
+  <input [(ngModel)]="sale.nos" type="number" name="nos" required />
+
+  <label>Purchase Price:</label>
+  <input [(ngModel)]="sale.purchasePrice" type="number" name="purchasePrice" required />
+
+  <label>Selling Price:</label>
+  <input [(ngModel)]="sale.sellingPrice" type="number" name="sellingPrice" required />
+
+  <label>Delivery Date:</label>
+  <input [(ngModel)]="sale.deliveryDate" type="date" name="deliveryDate" required />
+
+  <button type="submit">Submit</button>
 </form>
 
-<hr>
-
-<h2>Sales List</h2>
-<ul>
-  <li *ngFor="let s of salesList">
-    {{ s.party }} - {{ s.sellingTotal }} - Diff: {{ s.difference }}
-  </li>
-</ul>
+<!-- Display calculated values -->
+<div *ngIf="submittedSale" class="result">
+  <h3>Submitted Sale</h3>
+  <p><strong>Party:</strong> {{ submittedSale.party }}</p>
+  <p><strong>Purchase Total:</strong> {{ submittedSale.purchaseTotal }}</p>
+  <p><strong>Selling Total:</strong> {{ submittedSale.sellingTotal }}</p>
+  <p><strong>Difference:</strong> {{ submittedSale.difference }}</p>
+</div>
