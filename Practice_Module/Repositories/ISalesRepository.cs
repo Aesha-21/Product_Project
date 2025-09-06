@@ -4,7 +4,7 @@ namespace SalesApp.Repositories
 {
     public interface ISalesRepository
     {
-        Task<Sale> AddSaleAsync(Sale sale);
-        Task<List<Sale>> GetAllSalesAsync();
+        Task<Sale> Add(Sale sale);      
+        Task<List<Sale>> GetAll();      
     }
 }

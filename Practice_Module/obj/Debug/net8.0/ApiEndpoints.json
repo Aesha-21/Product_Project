@@ -8,21 +8,41 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "sale",
-        "Type": "SalesApp.Models.Sale",
+        "Name": "dto",
+        "Type": "Practice_Module.Models.SaleDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "SalesApp.Models.Sale",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "SalesApp.Controllers.SalesController",
-    "Method": "GetAllSales",
+    "Method": "GetAll",
     "RelativePath": "api/Sales",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SalesApp.Models.Sale, Practice_Module, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

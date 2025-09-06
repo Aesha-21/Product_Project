@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\services\\salesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\services\\salesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\models\\saledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\models\\saledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\repositories\\salesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\repositories\\salesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\repositories\\isalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\repositories\\isalesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|c:\\users\\asus\\source\\repos\\practice_project\\practice_module\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59A384C4-22E4-4984-A101-FAD9DB7E2FCB}|Practice_Module\\Practice_Module.csproj|solutionrelative:practice_module\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +46,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "SaleDto.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Models\\SaleDto.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Models\\SaleDto.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Models\\SaleDto.cs",
+              "RelativeToolTip": "Practice_Module\\Models\\SaleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T15:00:43.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SalesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Repositories\\SalesRepository.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Repositories\\SalesRepository.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Repositories\\SalesRepository.cs",
+              "RelativeToolTip": "Practice_Module\\Repositories\\SalesRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T10:49:12.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\appsettings.json",
+              "RelativeDocumentMoniker": "Practice_Module\\appsettings.json",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\appsettings.json",
+              "RelativeToolTip": "Practice_Module\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-05T10:45:51.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Practice_Module\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T10:31:24.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Program.cs",
               "RelativeDocumentMoniker": "Practice_Module\\Program.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Program.cs",
               "RelativeToolTip": "Practice_Module\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAmwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T11:43:21.014Z",
+              "WhenOpened": "2025-08-31T11:43:21.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Sale.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Models\\Sale.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Models\\Sale.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Models\\Sale.cs",
+              "RelativeToolTip": "Practice_Module\\Models\\Sale.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:58:48.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalesService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Services\\SalesService.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Services\\SalesService.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Services\\SalesService.cs",
+              "RelativeToolTip": "Practice_Module\\Services\\SalesService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T11:05:13.319Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISalesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Repositories\\ISalesRepository.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Repositories\\ISalesRepository.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Repositories\\ISalesRepository.cs",
+              "RelativeToolTip": "Practice_Module\\Repositories\\ISalesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T10:49:55.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SalesController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Controllers\\SalesController.cs",
+              "RelativeDocumentMoniker": "Practice_Module\\Controllers\\SalesController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\Practice_Project\\Practice_Module\\Controllers\\SalesController.cs",
+              "RelativeToolTip": "Practice_Module\\Controllers\\SalesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:59:29.507Z"
             }
           ]
         }

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using SalesApp.Models;
+using Practice_Module.Models;
 using SalesApp.Services;
+using System.Threading.Tasks;
 
 namespace SalesApp.Controllers
 {
@@ -8,28 +10,29 @@ namespace SalesApp.Controllers
     [Route("api/[controller]")]
     public class SalesController : ControllerBase
     {
-        private readonly ISalesService _service;
+       private readonly ISalesService _salesService;
 
-        public SalesController(ISalesService service)
-        {
-            _service = service;
+        public SalesController(ISalesService salesService) { 
+            _salesService = salesService;
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateSale([FromBody] Sale sale)
+        public async Task<ActionResult<Sale>> CreateSale([FromBody] SaleDto dto)
         {
-            if (sale == null)
-                return BadRequest("Invalid data");
+            if (dto == null) return BadRequest("Invalid Data");
 
-            var result = await _service.CreateSaleAsync(sale);
-            return Ok(new { Message = "Sale record created successfully", Data = result });
+            var sale = await _salesService.CreateSaleAsync(dto);
+            return Ok(sale);
+            
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllSales()
+        public async Task<ActionResult<List<Sale>>> GetAll()
         {
-            var sales = await _service.GetAllSalesAsync();
+            var sales = await _salesService.GetAllSalesAsync();
             return Ok(sales);
         }
     }
 }
+
+

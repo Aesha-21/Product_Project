@@ -1,23 +1,30 @@
+using Practice_Module.Models;
 using SalesApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SalesApp.Repositories
 {
     public class SalesRepository : ISalesRepository
     {
-        // Temporary in-memory list instead of DB
-        private static readonly List<Sale> _sales = new();
-        private static int _idCounter = 1;
+        private readonly AppDbContext _context;
 
-        public Task<Sale> AddSaleAsync(Sale sale)
+        public SalesRepository(AppDbContext context)
         {
-            sale.Id = _idCounter++;
-            _sales.Add(sale);
-            return Task.FromResult(sale);
+            _context = context;
         }
 
-        public Task<List<Sale>> GetAllSalesAsync()
+        // Add new Sale
+        public async Task<Sale> Add(Sale sale)
         {
-            return Task.FromResult(_sales);
+            _context.Sales.Add(sale);
+            await _context.SaveChangesAsync();   
+            return sale;                         
+        }
+
+        // Get all Sales
+        public async Task<List<Sale>> GetAll()
+        {
+            return await _context.Sales.ToListAsync();
         }
     }
 }

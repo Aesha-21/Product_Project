@@ -1,3 +1,4 @@
+using Practice_Module.Models;
 using SalesApp.Models;
 using SalesApp.Repositories;
 
@@ -12,19 +13,29 @@ namespace SalesApp.Services
             _repository = repository;
         }
 
-        public async Task<Sale> CreateSaleAsync(Sale sale)
+        public async Task<Sale> CreateSaleAsync(SaleDto dto)
         {
+            var sale = new Sale
+            {
+                Party = dto.Party,
+                Date = dto.Date,
+                Nos = dto.Nos,
+                PurchasePrice = dto.PurchasePrice,
+                SellingPrice = dto.SellingPrice,
+                DeliveryDate = dto.DeliveryDate
+            };
+
             // Business logic: auto-calc totals
             sale.PurchaseTotal = sale.Nos * sale.PurchasePrice;
             sale.SellingTotal = sale.Nos * sale.SellingPrice;
             sale.Difference = sale.SellingTotal - sale.PurchaseTotal;
 
-            return await _repository.AddSaleAsync(sale);
+            return await _repository.Add(sale);
         }
 
         public async Task<List<Sale>> GetAllSalesAsync()
         {
-            return await _repository.GetAllSalesAsync();
+            return await _repository.GetAll();
         }
     }
 }

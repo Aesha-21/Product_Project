@@ -1,7 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Practice_Module.Models;
 using SalesApp.Repositories;
 using SalesApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Register DbContext with MySQL
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    )
+);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -31,5 +41,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowAll");
+
 app.MapControllers();
+
 app.Run();

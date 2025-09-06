@@ -14,24 +14,41 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Sale"
+                "$ref": "#/components/schemas/SaleDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Sale"
+                "$ref": "#/components/schemas/SaleDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Sale"
+                "$ref": "#/components/schemas/SaleDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sale"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sale"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sale"
+                }
+              }
+            }
           }
         }
       },
@@ -41,7 +58,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sale"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sale"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sale"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -85,6 +128,36 @@
             "format": "double"
           },
           "difference": {
+            "type": "number",
+            "format": "double"
+          },
+          "deliveryDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SaleDto": {
+        "type": "object",
+        "properties": {
+          "party": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "purchasePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "sellingPrice": {
             "type": "number",
             "format": "double"
           },
